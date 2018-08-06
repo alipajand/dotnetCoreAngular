@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BrokerClub
+namespace StarterKit
 {
     public class Startup
     {
