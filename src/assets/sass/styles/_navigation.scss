@@ -1,0 +1,89 @@
+﻿.navbar {
+    font-size: 14px;
+    font-family: 'iran', $font-family-sans-serif;
+
+    ul.navbar-nav {
+        position: relative;
+        padding: 0.6rem 30px 0;
+
+        > li {
+            cursor: pointer;
+            font-size: 14px;
+            padding-bottom: 0.4rem;
+
+            > ul {
+                right: 0;
+                top: 55px;
+                font-size: 12px;
+                padding-top: 10px;
+                position: absolute;
+                background-color: #f9f9f9;
+                font-family: $font-family-sans-serif;
+                @include opacity(0);
+                @include transition($transition-base);
+                @include box-shadow-mix(0 0.1rem 0.6rem rgba(0, 0, 0, 0.2));
+
+                .nav-tabs {
+                    width: 25%;
+                    float: right;
+                    border: none;
+                    li {
+                        width: 100%;
+                        margin: 0 !important;
+                        border-left: 1px solid #ddd;
+                        border-bottom: 1px solid #ddd;
+
+                        > .nav-link {
+                            color: $black;
+                            cursor: pointer;
+                            font-size: 12px;
+                            padding: 14px 10px;
+                            @include box-shadow-mix(none !important);
+
+                            &:hover, &:focus, &.active {
+                                color: $black;
+                                background-color: #eee;
+                            }
+                            &.active {
+                                color: $primary;
+                            }
+                        }
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                    }
+                }
+                .tab-content {
+                    width: 75%;
+                    float: right;
+                    padding: 10px;
+                }
+            }
+            > .nav-link {
+                padding: 0.3rem;
+                text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+            }
+            &:hover {
+                > .nav-link {
+                    text-shadow: none;
+                    color: $black !important;
+                    background-color: rgba($white, 0.4);
+                    @include border-radius($border-radius);
+                }
+
+                > ul {
+                    top: 46px;
+                    z-index: $zindex-fixed;
+                    @include opacity(1);
+                }
+            }
+        }
+
+        @media (max-width: map-get($grid-breakpoints, 'lg')) {
+            padding: 10px 0;
+            .nav-item + .nav-item {
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@-webkit-keyframes slideInUp {
+    from {
+        visibility: visible;
+        @include opacity(0);
+        @include transform(translate3d(0, 100%, 0));
+    }
+
+    to {
+        @include opacity(1);
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        visibility: visible;
+        @include opacity(0);
+        @include transform(translate3d(0, 100%, 0));
+    }
+
+    to {
+        @include opacity(1);
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+}
+
+@for $i from 1 through 10 {
+    .card-in:nth-child(#{$i}) {
+        @include animation(slideInUp .6s cubic-bezier(0.4, 0, 0.2, 1) #{$i / 10}s backwards)
+    }
+}
