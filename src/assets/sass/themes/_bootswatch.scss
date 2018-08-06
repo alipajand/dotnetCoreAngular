@@ -97,7 +97,7 @@
     outline: none !important;
     text-transform: uppercase;
     border: 1px solid transparent;
-    @include box-shadow-mix(none);
+    @include box-shadow(none);
     @include transition(all 0.4s);
 
     &-link {
@@ -315,7 +315,7 @@ input[type=number],
 
 .dropdown-menu {
     margin-top: 2px;
-    @include box-shadow-mix($dropdown-box-shadow);
+    @include box-shadow($dropdown-box-shadow);
 }
 
 // Indicators ==================================================================

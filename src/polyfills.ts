@@ -77,9 +77,5 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * Application imports
  */
 import 'jquery/src/jquery';
-import 'jquery-ticker';
 import 'popper.js';
 import 'bootstrap';
-
-import './assets/js/flickity'
-import './assets/js/ticker'
