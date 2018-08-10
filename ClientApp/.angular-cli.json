@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "StarterKit"
+    "name": "RawProject"
   },
   "apps": [
     {
@@ -18,7 +18,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "assets/sass/bootstrap.scss"
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "./assets/sass/bootstrap.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

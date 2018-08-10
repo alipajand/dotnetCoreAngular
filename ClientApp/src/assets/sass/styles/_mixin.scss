@@ -22,6 +22,12 @@
     background: linear-gradient($arg);
 }
 
+@mixin box-shadow-mix($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
 @mixin placeholder-color($color...) {
     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: $color;
